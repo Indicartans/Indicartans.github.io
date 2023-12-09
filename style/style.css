@@ -127,6 +127,12 @@ table {
 
 body {
   font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -175,6 +181,11 @@ a {
   width: 100%;
   height: 100%;
   padding: 10px;
+  transition: 1s;
+}
+
+a:hover {
+  -webkit-text-stroke: 2px #ff0072;
 }
 
 .menu {
@@ -220,12 +231,20 @@ main {
     #6e0160 70%,
     #ff0072 100%
   );
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: max-content;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
 }
 section {
+  width: auto;
   height: 100vh;
-  margin: 0px 12px;
+  /* margin: 50px 0px; */
 }
 
 .container {
@@ -233,8 +252,10 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: fit-content;
   margin: 100px 20px 20px 20px;
   border-radius: 20px;
+  scroll-behavior: smooth;
 }
 
 .hero {
@@ -244,7 +265,7 @@ section {
 }
 
 .profile {
-  margin: 5px 50px 5px 50px;
+  margin: 5px 50px;
   width: auto;
   height: auto;
 }
@@ -257,8 +278,8 @@ section {
 .intro-profile p {
   font-size: 32px;
   margin-bottom: 12px;
-  position: relative;
-  z-index: 1;
+  /* position: relative;
+  z-index: 1; */
 }
 
 .intro-profile h1 {
@@ -274,20 +295,22 @@ section {
 }
 
 .img-profile {
-  width: 360px;
-  height: 400px;
+  /* width: 360px;
+  height: 400px; */
   overflow: hidden;
   /* background-color: #01368a; */
   border: 6px solid;
   border-color: #ff0072;
   border-radius: 5%;
   box-shadow: inset 0px 0px 50px #ff0072;
-  margin: 50px 50px;
+  /* margin: 50px 50px; */
 }
 
-/* .img-profile img {
-  justify-content: center;
-} */
+.img-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .intro-btn {
   margin-top: 20px;
@@ -301,4 +324,45 @@ section {
   border: 2px solid #ff0072;
   color: white;
   box-shadow: 0px 0px 25px #ff0072;
+}
+
+section.about-me {
+  background: linear-gradient(
+    to right top,
+    #170516 70%,
+    #6e0160 100%,
+    /* #ff0072 100% */
+  );
+}
+.about-me .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 0px;
+}
+
+.about {
+  width: 1000px;
+  height: fit-content;
+  color: white;
+  text-align: center;
+  /* border: 2px solid #fff; */
+  /* margin: 200px; */
+  margin-top: 10%;
+  padding: 50px;
+  transition: 1s;
+}
+
+.about h1 {
+  margin-bottom: 20px;
+  font-size: 64px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  color: #7d187800;
+  -webkit-text-stroke: 2px #ff0072;
+  text-shadow: 0px 0px 30px #ff0072;
+}
+
+.about p {
+  font-size: 20px;
 }
