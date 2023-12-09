@@ -222,6 +222,7 @@ button:hover {
 
 button a:hover {
   color: whitesmoke;
+  -webkit-text-stroke: 0px;
 }
 
 main {
