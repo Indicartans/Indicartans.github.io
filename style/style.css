@@ -335,12 +335,14 @@ section.about-me {
     #6e0160 100%,
     /* #ff0072 100% */
   );
+  height: 100vh;
 }
 .about-me .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-right: 0px;
+  /* margin-top: 20px; */
 }
 
 .about {
@@ -372,10 +374,15 @@ section.about-me {
 /* skills */
 
 section.skills {
-  height: fit-content;
+  height: max-content;
 }
 
 section.skills .container {
+  padding-bottom: 70px;
+}
+
+section.skills .container,
+section.projects .container {
   flex-direction: column;
 }
 
@@ -465,4 +472,59 @@ section.skills .container {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
   text-shadow: 0px 0px 10px #fff;
+}
+
+/* projects */
+section.projects {
+  background-color: #170516;
+  height: 100vh;
+}
+
+.carousel-container {
+  /* background-color: #ff0072; */
+  width: 100vw;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  /* overflow: scroll; */
+}
+
+.project-slide {
+  display: none;
+  width: 100%;
+}
+
+.projects-box {
+  background-color: #ff00734c;
+  box-shadow: inset 0px 0px 500px #ff0072;
+  width: 400px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.project-img {
+  border-radius: 5px;
+}
+
+.projects-box img {
+  width: 100%;
+}
+
+.project-heading {
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 12px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 5px 0px; */
 }
