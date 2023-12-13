@@ -480,8 +480,11 @@ section.projects {
 
 .carousel-container {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .next-btn,
@@ -503,33 +506,51 @@ section.projects {
   left: 15px;
 }
 
-.carousel-side {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  position: relative;
+.carousel-slide {
+  width: 100%;
+  /* display: none; */
 }
 
 .carousel-item {
-  flex: 0 0 80%; /* Set the width of each slide */
+  flex: 0 0 100%; /* Set the width of each slide */
   box-sizing: border-box;
   padding: 20px;
   text-align: center;
   box-shadow: inset 0px 0px 1000px #ff0072;
   margin: 12px 60px;
   border-radius: 10px;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+  display: block;
+  opacity: 1;
+}
+
+.carousel-item.inactive {
+  display: none;
+  opacity: 0;
 }
 
 .projects-box {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   padding: 50px;
-  justify-content: center;
+  gap: 3rem;
   color: #fff;
 }
 
-.projects-box img {
+.project-img {
   width: 450px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-img img {
+  width: 400px;
+  object-fit: cover;
 }
 
 .project-desc {
