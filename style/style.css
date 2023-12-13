@@ -177,15 +177,12 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
-  display: block;
-  width: 100%;
-  height: 100%;
   padding: 10px;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 a:hover {
-  -webkit-text-stroke: 2px #ff0072;
+  color: #ff0072;
 }
 
 .menu {
@@ -358,6 +355,7 @@ section.about-me {
 }
 
 .heading-section {
+  margin-top: 60px;
   margin-bottom: 20px;
   font-size: 64px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -476,55 +474,95 @@ section.projects .container {
 
 /* projects */
 section.projects {
-  background-color: #170516;
-  height: 100vh;
+  text-align: center;
+  background: linear-gradient(to right, #170516 20%, #6e015f7e 90%);
 }
 
 .carousel-container {
-  /* background-color: #ff0072; */
-  width: 100vw;
-  padding: 30px;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  /* overflow: scroll; */
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.project-slide {
-  display: none;
-  width: 100%;
+.next-btn,
+.prev-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  color: white;
+  background-color: #a0a0a0;
+  cursor: pointer;
+}
+
+.next-btn {
+  right: 15px;
+}
+
+.prev-btn {
+  left: 15px;
+}
+
+.carousel-side {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+.carousel-item {
+  flex: 0 0 80%; /* Set the width of each slide */
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  box-shadow: inset 0px 0px 1000px #ff0072;
+  margin: 12px 60px;
+  border-radius: 10px;
 }
 
 .projects-box {
-  background-color: #ff00734c;
-  box-shadow: inset 0px 0px 500px #ff0072;
-  width: 400px;
-  height: 450px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  padding: 50px;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
-  gap: 20px;
-  border-radius: 10px;
-  color: white;
-}
-
-.project-img {
-  border-radius: 5px;
+  color: #fff;
 }
 
 .projects-box img {
-  width: 100%;
+  width: 450px;
 }
 
-.project-heading {
-  font-size: 20px;
+.project-desc {
+  text-align: left;
+  margin: 0px 12px;
+}
+
+.project-desc h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-bottom: 3px;
+}
+
+.project-desc h1 {
+  margin-bottom: 15px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-bottom: 12px;
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 0px 0px 25px #ff0072;
+}
+
+.view-project {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #d0005e;
+}
+
+.view-project:hover {
+  /* transform: scale(1.5); */
   color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* padding: 5px 0px; */
+  box-shadow: 0px 0px 10px #ff0072;
+}
+.project-desc p {
+  margin-top: 15px;
+  font-size: 20px;
 }
