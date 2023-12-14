@@ -126,13 +126,18 @@ table {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "poppins", sans-serif;
+
   width: 100%;
   height: fit-content;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+p {
+  line-height: 1.5;
 }
 
 nav {
@@ -251,7 +256,7 @@ section {
   justify-content: center;
   width: 100%;
   height: fit-content;
-  margin: 100px 20px 20px 20px;
+  /* margin: 100px 40px 20px 20px; */
   border-radius: 20px;
   scroll-behavior: smooth;
 }
@@ -586,4 +591,69 @@ section.projects {
 .project-desc p {
   margin-top: 15px;
   font-size: 20px;
+}
+
+/* contacts */
+section.contacts {
+  width: 100%;
+  background: linear-gradient(to bottom, #170516 70%, #ff0072 110%);
+  font-family: "poppins", sans-serif;
+}
+
+section.contacts .container {
+  margin-top: 70px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-content: center; */
+}
+
+.content {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.contacts-content {
+  /* width: 50%; */
+}
+
+section.contacts .container p {
+  height: max-content;
+  font-size: 20px;
+  text-align: left;
+  text-align: justify;
+}
+
+section.contacts .heading-section {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.sosmed-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 50px;
+  font-size: 26px;
+}
+
+.sosmed-icons a {
+  padding: 0px;
+  margin-bottom: 20px;
+}
+
+/* footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #c60059, #ff0072);
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #170516;
 }
