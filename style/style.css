@@ -125,6 +125,28 @@ table {
   border-spacing: 0;
 }
 
+/* scrollbar */
+/* Pilihan untuk Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a9a9a9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Pilihan untuk Firefox
+/* Styling scrollbar */
+/* scrollbar-color: #3498db #f1f1f1; */
+
+/* Styling thumb */
+/* scrollbar-width: thin; */
+
 body {
   font-family: "poppins", sans-serif;
 
@@ -145,6 +167,7 @@ nav {
   height: fit-content;
   display: block;
   position: fixed;
+  z-index: 1000;
   /* box-shadow: 0px 0px 25px #e8e8e882; */
 }
 .nav {
@@ -467,7 +490,7 @@ section.projects .container {
   text-align: center;
   color: rgb(247, 228, 228);
   margin-top: 20px;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .skill-box h1 {
@@ -612,10 +635,6 @@ section.contacts .container {
 .content {
   margin-left: 50px;
   margin-right: 50px;
-}
-
-.contacts-content {
-  /* width: 50%; */
 }
 
 section.contacts .container p {
