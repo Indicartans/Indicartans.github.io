@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // smooth scroll
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach((link) => {
+    link.addEventListener("click", smoothScroll);
+  });
+
+  function smoothScroll(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: "smooth",
+    });
+  }
+
+  // carousel
   const slides = document.querySelectorAll(".carousel-item");
   let currentSlide = 0;
 
@@ -6,16 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     slides.forEach((slide, i) => {
       slide.style.display = i === index ? "block" : "none";
     });
-
-    // slides.forEach((slide, i) => {
-    //   if (i === index) {
-    //     slide.style.opacity = "1";
-    //     slide.style.visibility = "visible";
-    //   } else {
-    //     slide.style.opacity = "0";
-    //     slide.style.visibility = "hidden";
-    //   }
-    // });
   }
 
   function nextSlide() {
