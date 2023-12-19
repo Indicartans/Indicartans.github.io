@@ -210,7 +210,7 @@ a {
 }
 
 a:hover {
-  color: #ff0072;
+  color: #0015ff;
 }
 
 .menu {
@@ -270,9 +270,7 @@ section {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  /* background-color: white; */
   height: fit-content;
-  /* margin: 100px 40px 20px 20px; */
   border-radius: 20px;
   scroll-behavior: smooth;
 }
@@ -641,7 +639,7 @@ section.contacts .heading-section {
   flex-direction: column;
   align-items: start;
   margin-top: 50px;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .sosmed-icons a {
