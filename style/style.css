@@ -430,57 +430,6 @@ section.projects .container {
   flex-direction: row;
 }
 
-@keyframes lightUpAndFadeOut {
-  0% {
-    box-shadow: 0px 0px 25px #380019;
-  }
-  25% {
-    box-shadow: 0px 0px 25px #8c003f;
-  }
-  50% {
-    box-shadow: 0px 0px 25px #ff0072;
-  }
-  75% {
-    box-shadow: 0px 0px 25px #8c003f;
-  }
-  100% {
-    box-shadow: 0px 0px 25px #380019;
-  }
-}
-
-.box {
-  border: 5px solid #ff0072;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 12px;
-  animation: lightUpAndFadeOut 8s infinite;
-}
-
-.box-1 {
-  animation-delay: 0s;
-}
-.box-2 {
-  animation-delay: 2s;
-}
-.box-3 {
-  animation-delay: 3s;
-}
-.box-4 {
-  animation-delay: 4s;
-}
-.box-5 {
-  animation-delay: 5s;
-}
-.box-6 {
-  animation-delay: 6s;
-}
-.box-7 {
-  animation-delay: 7s;
-}
-.box-8 {
-  animation-delay: 8s;
-}
-
 /* projects */
 section.projects {
   text-align: center;
