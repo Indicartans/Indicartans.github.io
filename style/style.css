@@ -204,10 +204,7 @@ nav .logo img {
 }
 
 nav button {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  /* padding: 10 px; */
+  display: none;
 }
 
 nav button:hover {
@@ -226,6 +223,13 @@ nav button:hover {
 }
 
 @media screen and (max-width: 576px) {
+  nav button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+  }
+
   nav ul {
     /* display:; */
     position: absolute;
