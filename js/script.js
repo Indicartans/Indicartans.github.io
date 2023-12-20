@@ -18,6 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // nav slide
+  const button = document.querySelector("nav");
+  const nav = document.querySelector("nav ul");
+
+  button.addEventListener("click", function () {
+    nav.classList.toggle("slide");
+  });
+
   // carousel
   const slides = document.querySelectorAll(".carousel-item");
   let currentSlide = 0;

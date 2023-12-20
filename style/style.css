@@ -140,13 +140,6 @@ table {
   background-color: #f1f1f1;
 }
 
-/* Pilihan untuk Firefox
-/* Styling scrollbar */
-/* scrollbar-color: #3498db #f1f1f1; */
-
-/* Styling thumb */
-/* scrollbar-width: thin; */
-
 body {
   font-family: "poppins", sans-serif;
 
@@ -162,50 +155,42 @@ p {
   line-height: 1.5;
 }
 
+/* navbar */
 nav {
   width: 100%;
   height: fit-content;
-  display: block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   position: fixed;
   z-index: 1000;
-  /* box-shadow: 0px 0px 25px #e8e8e882; */
-}
-.nav {
   background: linear-gradient(to right, #665c5c31, #5a5a5a79);
-  /* background-color: #16122d; */
-  width: auto;
-  height: max-content;
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-  padding: 13px 20px;
+  color: white;
+  padding: 20px 0px;
+  /* position: relative; */
 }
 
 .logo {
-  display: inline-flex;
-  color: white;
-  justify-content: center;
+  display: flex;
   align-items: center;
-  text-align: center;
+  width: 50%;
 }
 
-.logo h1 {
-  font-weight: bold;
+nav ul {
+  list-style: none;
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
 }
 
-.logo-img {
-  width: 50px;
-  margin-right: 20px;
-}
-
-ul {
-  justify-content: center;
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  padding: 10px;
   transition: 0.5s;
 }
 
@@ -213,39 +198,64 @@ a:hover {
   color: #0015ff;
 }
 
-.menu {
-  color: white;
-  width: auto;
-  height: auto;
-  display: inline-block;
-  border: 2rem;
-  border-color: white;
-  margin: 0px 10px;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+nav .logo img {
+  width: 50px;
+  margin-right: 12px;
 }
 
-button {
-  width: fit-content;
-  height: fit-content;
-  color: white;
-  background-color: #170516;
+nav button {
+  background-color: transparent;
   border: none;
-  transition: 0.2s;
-  border-radius: 5px;
-  display: inline-flex;
+  color: #fff;
+  /* padding: 10 px; */
 }
 
-button:hover {
-  box-shadow: 0px 0px 25px #170516;
-  background-color: #ffffff00;
-  color: whitesmoke;
+nav button:hover {
+  color: #999;
 }
 
-button a:hover {
-  color: whitesmoke;
-  -webkit-text-stroke: 0px;
+/* responsive breakpoint */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+
+  .logo {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav ul {
+    /* display:; */
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    transform: translateY(-100%);
+    background: linear-gradient(to top, #665c5c, #5a5a5a79);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+
+  nav ul.slide {
+    transform: translateY(0%);
+  }
+
+  .logo img {
+    margin-left: 5%;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  nav button {
+    font-size: 200%;
+  }
 }
 
 main {
