@@ -571,6 +571,128 @@ footer a:hover {
   .logo {
     width: 40%;
   }
+
+  .heading-section {
+    font-size: 32px;
+  }
+
+  section.hero .container .profile h1 {
+    font-size: 40px;
+    margin: 0px 0px;
+    margin-top: -15px;
+    /* -webkit-text-stroke: 10px; */
+  }
+  section.hero .container .profile p {
+    font-size: 30px;
+    margin-bottom: 15px;
+    /* -webkit-text-stroke: 10px; */
+  }
+
+  section.hero a {
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  /* about-me */
+  .about-me p {
+    font-size: 15px;
+  }
+  /* skills */
+  .skills .container {
+    width: 100%;
+    height: 100%;
+    /* align-items: start; */
+    justify-content: center;
+  }
+
+  .skill-list {
+    align-items: start;
+  }
+
+  .skill img {
+    width: 70px;
+  }
+
+  /* projects */
+  .section.projects {
+    padding: 20px; /* Add padding to the section on small screens */
+  }
+
+  .section.projects .container h1 {
+    margin-top: 20%;
+  }
+
+  .carousel-item {
+    margin: 20px 20px; /* Adjust margin for smaller screens */
+    /* padding: 5px; */
+  }
+
+  .projects-box {
+    flex-direction: column; /* Change to a column layout for projects */
+    gap: 1rem;
+    padding: 0px;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-img img {
+    width: 30%;
+  }
+
+  .project-desc {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 12px;
+  }
+
+  .project-desc h1 {
+    font-size: 25px; /* Adjust font size for smaller screens */
+  }
+
+  .project-desc p {
+    font-size: 15px;
+  }
+
+  .next-btn,
+  .prev-btn {
+    padding: 5px;
+    border: none;
+  }
+
+  .view-project {
+    font-size: 14px; /* Adjust font size for the "view project" button */
+    padding: 3px;
+  }
+
+  /* contacts */
+  section.contacts .container p {
+    height: max-content;
+    font-size: 15px;
+    /* text-align: left; */
+    text-align: justify;
+  }
+
+  .content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .sosmed-icons {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  section.contacts .container {
+    margin-top: 100px;
+  }
+
+  /* footer */
+  .footer {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 576px) {
