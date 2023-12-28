@@ -730,6 +730,11 @@ footer a:hover {
     text-align: justify;
   }
 
+  .content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   .sosmed-icons {
     font-size: 12px;
     margin-top: 20px;
