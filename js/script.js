@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (posisiScroll >= offset && posisiScroll < offset + tinggi) {
         // Hapus kelas "active" dari semua tautan navigasi
-        navLinks.forEach((tautan) => {
-          tautan.classList.remove("active");
+        navLinks.forEach((links) => {
+          links.classList.remove("active");
         });
 
         // Tambahkan kelas "active" ke tautan navigasi yang sesuai
