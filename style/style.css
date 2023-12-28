@@ -721,6 +721,10 @@ footer a:hover {
     transform: translateY(0%);
   }
 
+  nav .logo {
+    width: 100%;
+  }
+
   .logo img {
     margin-left: 5%;
   }
