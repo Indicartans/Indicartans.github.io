@@ -142,12 +142,11 @@ table {
 
 body {
   font-family: "poppins", sans-serif;
-
   width: 100%;
   height: fit-content;
   margin: 0;
   padding: 0;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -157,7 +156,7 @@ p {
 
 /* navbar */
 nav {
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   display: flex;
   justify-content: space-around;
@@ -209,57 +208,6 @@ nav button {
 
 nav button:hover {
   color: #999;
-}
-
-/* responsive breakpoint */
-@media screen and (max-width: 768px) {
-  nav ul {
-    width: 50%;
-  }
-
-  .logo {
-    width: 40%;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  nav button {
-    display: block;
-    background-color: transparent;
-    border: none;
-    color: #fff;
-  }
-
-  nav ul {
-    /* display:; */
-    position: absolute;
-    top: 0;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: center;
-    transform: translateY(-100%);
-    background: linear-gradient(to top, #665c5c, #5a5a5a79);
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-    transition: all 0.5s;
-  }
-
-  nav ul.slide {
-    transform: translateY(0%);
-  }
-
-  .logo img {
-    margin-left: 5%;
-  }
-
-  nav {
-    justify-content: space-between;
-  }
-
-  nav button {
-    font-size: 200%;
-  }
 }
 
 main {
@@ -404,14 +352,11 @@ section.about-me {
 section.skills {
   background: linear-gradient(to bottom, #0015ff 0%, #000758 20%, #00053b 50%);
   display: flex;
-  align-items: center;
+  align-content: center;
 }
 
 section.skills .container {
-  padding: 20px;
   width: 100%;
-  /* overflow: hidden; */
-  /* background-color: #8c003f; */
 }
 
 .skill-list {
@@ -471,6 +416,7 @@ section.projects {
   color: white;
   background-color: #a0a0a0;
   cursor: pointer;
+  border: non;
 }
 
 .next-btn {
@@ -576,8 +522,6 @@ section.contacts .container {
   color: white;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-content: center; */
 }
 
 .content {
@@ -623,4 +567,180 @@ footer a {
 
 footer a:hover {
   color: #170516;
+}
+
+/* responsive breakpoint */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+
+  .logo {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+  }
+
+  nav ul {
+    /* display:; */
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    transform: translateY(-100%);
+    background: linear-gradient(to top, #665c5c, #5a5a5a79);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+
+  nav ul.slide {
+    transform: translateY(0%);
+  }
+
+  .logo img {
+    margin-left: 5%;
+  }
+
+  nav {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  nav button {
+    font-size: 200%;
+  }
+
+  section.hero .container {
+    flex-direction: column-reverse;
+  }
+
+  section.hero .img-profile {
+    /* display: none; */
+    width: 60%;
+  }
+
+  section.hero .container .profile h1 {
+    font-size: 30px;
+    margin: 0px 0px;
+    /* -webkit-text-stroke: 10px; */
+  }
+  section.hero .container .profile p {
+    font-size: 20px;
+    margin-bottom: 5px;
+    /* -webkit-text-stroke: 10px; */
+  }
+
+  section.hero a {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .heading-section {
+    font-size: 32px;
+  }
+
+  /* about me */
+  .about-me p {
+    font-size: 12px;
+  }
+
+  /* skills */
+  .skills .container {
+    width: 100%;
+    height: 100%;
+    /* align-items: start; */
+    justify-content: center;
+  }
+
+  .skill-list {
+    align-items: start;
+  }
+  .skill {
+    padding: 10px;
+    border: 3px solid #0015ff;
+  }
+  .skill img {
+    width: 50px;
+  }
+
+  /* projects */
+  .section.projects {
+    padding: 20px; /* Add padding to the section on small screens */
+  }
+
+  .carousel-item {
+    margin: 20px 20px; /* Adjust margin for smaller screens */
+  }
+
+  .projects-box {
+    flex-direction: column; /* Change to a column layout for projects */
+    gap: 1rem;
+    padding: 0px;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-img img {
+    width: 50%;
+  }
+
+  .project-desc {
+    text-align: center;
+    margin: 12px 0;
+    font-size: 12px;
+  }
+
+  .project-desc h1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .project-desc p {
+    font-size: 12px;
+  }
+
+  .next-btn,
+  .prev-btn {
+    padding: 5px;
+    border: none;
+  }
+
+  .view-project {
+    font-size: 14px; /* Adjust font size for the "view project" button */
+    padding: 3px;
+  }
+
+  /* contacts */
+  section.contacts .container p {
+    height: max-content;
+    font-size: 12px;
+    text-align: left;
+    text-align: justify;
+  }
+
+  .sosmed-icons {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  section.contacts .container {
+    margin-top: 100px;
+  }
+
+  /* footer */
+  .footer {
+    font-size: 12px;
+  }
 }
