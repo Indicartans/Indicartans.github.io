@@ -172,11 +172,9 @@ nav {
   align-items: center;
   position: fixed;
   z-index: 1000;
-  /* background: linear-gradient(to right, #665c5c31, #5a5a5a79); */
   background-color: #444444;
   color: white;
   padding: 20px 0px;
-  /* position: relative; */
 }
 
 .logo {
@@ -197,13 +195,18 @@ nav ul li a {
   color: inherit;
 }
 
+nav ul li.active {
+  color: var(--text-color);
+}
+
 a {
   text-decoration: none;
   color: inherit;
   transition: 0.5s;
 }
 
-a:hover {
+a:hover,
+nav ul li a.active {
   color: var(--text-color);
 }
 
@@ -214,10 +217,6 @@ nav .logo img {
 
 nav button {
   display: none;
-}
-
-nav button:hover {
-  color: #999;
 }
 
 main {

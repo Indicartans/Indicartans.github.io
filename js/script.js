@@ -51,4 +51,31 @@ document.addEventListener("DOMContentLoaded", function () {
   // Tambahkan event listener untuk tombol next dan prev
   document.getElementById("next-btn").addEventListener("click", nextSlide);
   document.getElementById("prev-btn").addEventListener("click", prevSlide);
+
+  // membuat navigasi aktif sesuai yang dilihat
+  // Menangkap elemen-elemen bagian
+  let sections = document.querySelectorAll("section");
+  let navLinks = document.querySelectorAll("nav ul li a");
+
+  window.onscroll = () => {
+    let posisiScroll = window.scrollY;
+
+    sections.forEach((bagian) => {
+      let offset = bagian.offsetTop;
+      let tinggi = bagian.offsetHeight;
+      let id = bagian.getAttribute("id");
+
+      if (posisiScroll >= offset && posisiScroll < offset + tinggi) {
+        // Hapus kelas "active" dari semua tautan navigasi
+        navLinks.forEach((tautan) => {
+          tautan.classList.remove("active");
+        });
+
+        // Tambahkan kelas "active" ke tautan navigasi yang sesuai
+        document
+          .querySelector(`nav ul li a[href="#${id}"]`)
+          .classList.add("active");
+      }
+    });
+  };
 });
