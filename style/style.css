@@ -572,7 +572,7 @@ footer a:hover {
   }
 
   .heading-section {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   section.hero .container .profile h1 {
@@ -609,7 +609,7 @@ footer a:hover {
   }
 
   .skill img {
-    width: 70px;
+    width: 120px;
   }
 
   /* projects */
@@ -782,6 +782,7 @@ footer a:hover {
 
   .skill-list {
     align-items: start;
+    gap: 1rem;
   }
 
   .skill img {
