@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // membuat navigasi aktif sesuai yang dilihat
   // Menangkap elemen-elemen bagian
   let sections = document.querySelectorAll("section");
-  let navLinks = document.querySelectorAll("nav ul li a");
+  let navLinks = document.querySelectorAll("nav ul li a.nav");
 
   window.onscroll = () => {
     let posisiScroll = window.scrollY;

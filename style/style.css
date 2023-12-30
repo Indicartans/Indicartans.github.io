@@ -215,7 +215,7 @@ nav .logo img {
   margin-right: 12px;
 }
 
-nav button {
+nav button.hamburger {
   display: none;
 }
 
